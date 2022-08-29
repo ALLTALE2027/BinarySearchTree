@@ -30,9 +30,13 @@ namespace BinarySearchTree
 
         }
 
-        public bool SearchKey(K key)
+        public void SearchKey(K key)
         {
-            return SearchRecursively(Root, key);
+           bool result =SearchRecursively(Root, key);
+           if(result)
+               Console.WriteLine("Element is present");
+           else
+               Console.WriteLine("Element is not present");
         }
 
         private bool SearchRecursively(BinaryNode<K> current, K key)
